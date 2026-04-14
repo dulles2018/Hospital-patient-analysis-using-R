@@ -1,36 +1,41 @@
-# Hospital-patient-analysis-using-R
-This project uses R to analyze hospital data and identify factors affecting patient readmission, treatment outcomes, and costs. It includes data cleaning, visualization, and a basic predictive model to generate healthcare insights.
-# 🏥 Hospital Patient Readmission & Outcomes Analysis (R)
+# 🏥 Hospital Patient Readmission Analysis (R)
 
 ## 📌 Overview
-This project analyzes hospital patient data using R to uncover insights related to patient readmission risk, treatment effectiveness, and healthcare cost patterns. The goal is to support data-driven decision-making in clinical and operational healthcare settings.
+This project analyzes hospital patient data using R to identify factors affecting readmission rates, treatment outcomes, and healthcare costs.
 
 ## 🎯 Objective
-To identify key drivers of patient readmission and treatment outcomes, enabling hospitals to improve care quality, reduce readmissions, and optimize resource utilization.
+To understand patterns in hospital data and build a simple predictive model for patient readmission risk.
 
-## 🧰 Tools & Technologies
-- R Programming  
-- tidyverse (dplyr, ggplot2)  
-- caret (predictive modeling)  
-- RStudio  
+## 🧰 Tools Used
+- R Programming
+- tidyverse
+- ggplot2
+- caret
 
-## 📊 Key Work Performed
-- Cleaned and preprocessed hospital patient datasets  
-- Conducted exploratory data analysis (EDA) to identify trends and patterns  
-- Created visual dashboards using ggplot2  
-- Built a logistic regression model to estimate readmission risk  
+## 📊 What I Did
+- Generated synthetic hospital dataset
+- Cleaned and prepared data for analysis
+- Performed exploratory data analysis (EDA)
+- Created visualizations for key insights
+- Built logistic regression model to predict readmission
 
 ## 📈 Key Insights
-- Identified demographic and clinical factors associated with higher readmission risk  
-- Analyzed relationship between length of stay, treatment type, and cost  
-- Highlighted patient segments with higher utilization and risk profiles  
-
-## 💡 Impact
-This analysis demonstrates how healthcare data can be leveraged to improve patient outcomes, reduce unnecessary readmissions, and support clinical decision-making workflows similar to those used in EHR systems like Epic.
+- Age and length of stay influence readmission risk
+- Cost varies significantly across diagnoses
+- Certain patient groups show higher readmission rates
 
 ## 🚀 How to Run
-1. Clone this repository  
-2. Open the project in RStudio  
-3. Install required packages:
-   ```r
-   install.packages(c("tidyverse", "caret"))
+1. Run `00_generate_data.R`
+2. Run scripts in order:
+   - 01_data_cleaning.R  
+   - 02_exploratory_analysis.R  
+   - 03_visualizations.R  
+   - 04_readmission_model.R  
+
+## 📁 Folder Structure
+- data/ → dataset
+- scripts/ → R code
+- outputs/ → graphs
+
+## 👤 Author
+Sruthirekha Ashokkumar
