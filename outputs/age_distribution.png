@@ -1,0 +1,18 @@
+# Load libraries
+library(tidyverse)
+
+# Load dataset
+data <- read_csv("data/hospital_data.csv")
+
+# Create outputs folder if it doesn't exist
+if (!dir.exists("outputs")) {
+  dir.create("outputs")
+}
+
+# -----------------------------
+# Age Distribution Plot
+# -----------------------------
+age_plot <- ggplot(data, aes(x = age)) +
+  geom_histogram(binwidth = 5, fill = "steelblue", color = "white") +
+  labs(
+   
