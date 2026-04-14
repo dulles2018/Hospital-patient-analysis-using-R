@@ -1,0 +1,32 @@
+# Load libraries
+library(tidyverse)
+
+# Load dataset
+data <- read_csv("data/hospital_data.csv")
+
+# Create outputs folder if it doesn't exist
+if (!dir.exists("outputs")) {
+  dir.create("outputs")
+}
+
+# -----------------------------
+# Readmission by Gender Plot
+# -----------------------------
+readmission_gender_plot <- ggplot(data, aes(x = gender, fill = readmitted)) +
+  geom_bar(position = "fill") +
+  labs(
+    title = "Readmission Rates by Gender",
+    x = "Gender",
+    y = "Proportion",
+    fill = "Readmitted"
+  ) +
+  theme_minimal()
+
+# Save plot
+ggsave(
+  filename = "outputs/readmission_gender.png",
+  plot = readmission_gender_plot,
+  width = 8,
+  height = 5,
+  dpi = 300
+)
