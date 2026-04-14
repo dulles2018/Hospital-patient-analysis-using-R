@@ -1,0 +1,32 @@
+# Load libraries
+library(tidyverse)
+
+# Load dataset
+data <- read_csv("data/hospital_data.csv")
+
+# Create outputs folder if it doesn't exist
+if (!dir.exists("outputs")) {
+  dir.create("outputs")
+}
+
+# -----------------------------
+# Cost vs Length of Stay Plot
+# -----------------------------
+cost_stay_plot <- ggplot(data, aes(x = length_of_stay, y = cost)) +
+  geom_point(color = "darkred", alpha = 0.6) +
+  geom_smooth(method = "lm", color = "blue", se = FALSE) +
+  labs(
+    title = "Cost vs Length of Hospital Stay",
+    x = "Length of Stay (Days)",
+    y = "Cost ($)"
+  ) +
+  theme_minimal()
+
+# Save plot
+ggsave(
+  filename = "outputs/cost_vs_stay.png",
+  plot = cost_stay_plot,
+  width = 8,
+  height = 5,
+  dpi = 300
+)
